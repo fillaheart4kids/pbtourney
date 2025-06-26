@@ -19,7 +19,7 @@ navLinks.forEach(link => {
 // Countdown Timer
 const countdown = () => {
     // Set the date for the countdown
-    const countDate = new Date('July 29, 2025 10:00:00').getTime();
+    const countDate = new Date('July 26, 2025 10:00:00').getTime();
     const now = new Date().getTime();
     const gap = countDate - now;
 
