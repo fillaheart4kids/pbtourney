@@ -210,8 +210,7 @@ a {
   align-items: center;
 }
 .about__image {
-  width: 80%;
-  max-width: 350px;
+  width: clamp(300px, 40vw, 600px);
   height: auto;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -344,8 +343,8 @@ a {
   text-align: center;
 }
 .sponsor-card img {
-  height: 80px;
-  max-width: 220px;
+  width: clamp(150px, 20vw, 300px);
+  height: auto;
   object-fit: contain;
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
