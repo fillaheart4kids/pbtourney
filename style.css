@@ -115,12 +115,6 @@ a {
   align-items: center;
   gap: 3rem;
 }
-.nav__toggle {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--primary-dark-blue);
-}
 .nav__list {
   display: flex;
   list-style: none;
@@ -144,6 +138,12 @@ a {
 }
 .nav__link:hover::after {
   width: 100%;
+}
+.nav__toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-dark-blue);
 }
 .hero {
   padding-top: 80px;
@@ -398,49 +398,49 @@ a {
   color: #adb5bd;
   text-decoration: underline;
 }
-@media (max-width: 1024px) {
+
+/* Mobile Navigation */
+.nav__toggle {
+  display: block;
+  position: relative;
+  z-index: 2000;
+}
+.nav__menu {
+  position: fixed;
+  top: 80px;
+  right: -100%;
+  width: 100%;
+  height: calc(100% - 80px);
+  background: var(--white);
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  gap: 2rem;
+  transition: right 0.3s ease;
+}
+.nav__menu.show-menu {
+  right: 0;
+}
+
+/* Stack F4K image above text on mobile */
+@media (max-width: 768px) {
   .about__container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
   }
 }
-@media (max-width: 768px) {
+
+/* Reset nav on larger screens */
+@media (min-width: 769px) {
   .nav__toggle {
-    display: block;
+    display: none;
   }
   .nav__menu {
-    position: fixed;
-    top: 80px;
-    right: -100%;
-    width: 100%;
-    height: calc(100% - 80px);
-    background: var(--white);
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 2rem;
-    gap: 2rem;
-    transition: right 0.3s ease;
-  }
-  .nav__menu.show-menu {
-    right: 0;
-  }
-  .nav__list {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .about__container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .footer__container {
-    gap: 1.5rem;
-  }
-}
-@media (max-width: 600px) {
-  #countdown {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    position: static;
+    flex-direction: row;
+    height: auto;
+    background: none;
   }
 }
