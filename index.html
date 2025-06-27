@@ -4,177 +4,35 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pickleball for a Purpose | A Fill a Heart 4 Kids Fundraiser</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#" class="nav__logo">Pickleball for a Purpose</a>
-      <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#details" class="nav__link">Details</a></li>
-          <li class="nav__item"><a href="#sponsors" class="nav__link">Sponsors</a></li>
-        </ul>
-        <a href="https://docs.google.com/forms/d/1OB6x0o3dcXI0t7EbszynxgtBVQE3DqwpktN7LeScRxk/edit" class="btn btn-primary nav__btn" target="_blank">Register Now</a>
-      </div>
-      <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-line"></i></div>
-    </nav>
-  </header>
+
+  <!-- HEADER / NAV -->
+  <header id="header" data-include="sections/nav.html"></header>
+
   <main>
-    <section class="hero" id="hero">
-      <div class="hero__container container">
-        <h1>Serve, Rally, & Support</h1>
-        <p class="hero__subtitle">Join us for a day of fun, community, and friendly competition to make a difference in the lives of local children. All for a great cause.</p>
-        <div id="countdown"></div>
-        <a href="https://docs.google.com/forms/d/1OB6x0o3dcXI0t7EbszynxgtBVQE3DqwpktN7LeScRxk/edit" class="btn btn-primary" target="_blank">Register to Play!</a>
-      </div>
-    </section>
-    <section class="section" id="about">
-      <div class="about__container container reveal">
-        <div class="about__content">
-          <h2>More Than a Game.<br>A Chance to Give Back.</h2>
-          <p>Welcome to a tournament where community spirit and fun are the real winners. This doubles-only pickleball event is open to all skill levels, with proceeds benefiting Fill a Heart 4 Kids.</p>
-          <p>Your participation helps provide food, educational supplies, and critical care to underprivileged and at-risk children across the greater Chicago area. Let's make a lasting impact, one game at a time.</p>
-          <p>Learn more about their mission at <a href="https://www.fillaheart4kids.org" target="_blank">fillaheart4kids.org</a>.</p>
-        </div>
-        <div class="about__image-wrapper">
-          <img src="f4k.png" alt="Fill a Heart 4 Kids Logo" class="about__image"/>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="details">
-      <div class="container reveal">
-        <div class="section-title">
-          <h2>Event Details</h2>
-          <p>Everything you need to know to join in on the fun and make a difference.</p>
-        </div>
-        <div class="details__grid">
-          <div class="detail-card">
-            <i class="ri-calendar-event-line detail-card__icon"></i>
-            <h3>Date & Time</h3>
-            <p>Saturday, July 26, 2025<br>Starts at 10:00 AM</p>
-          </div>
-          <div class="detail-card">
-            <i class="ri-map-pin-line detail-card__icon"></i>
-            <h3>Location</h3>
-            <p><a href="https://thepicklr.com/location/mundelein/" target="_blank">The Picklr – Mundelein, IL</a><br>(Located Near LA Fitness)</p>
-          </div>
-          <div class="detail-card">
-            <i class="ri-team-line detail-card__icon"></i>
-            <h3>Format & Entry</h3>
-            <p><strong>Open Doubles Tournament</strong><br>$15 Entry Fee Per Player<br/><small>Limited to 32 teams of 2 (64 players total). Waitlist available once full.</small></p>
-          </div>
-          <div class="detail-card">
-            <i class="ri-trophy-line detail-card__icon"></i>
-            <h3>Prize Pool</h3>
-            <p><strong>$200 Total Prize Pool</strong><br>More prizes and giveaways throughout the day!</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="bracket">
-      <div class="container reveal">
-        <div class="section-title">
-          <h2>Tournament Bracket</h2>
-          <p>Follow the path to victory! The bracket will be updated live during the event.</p>
-        </div>
-        <div class="theme">
-          <div class="bracket">
-            <div class="column">
-              <div class="match">
-                <div class="match-top team"><span class="seed">1</span><span class="name">Team 1</span></div>
-                <div class="match-bottom team"><span class="seed">8</span><span class="name">Team 8</span></div>
-                <div class="match-lines"><div class="line one"></div><div class="line two"></div></div>
-                <div class="match-lines alt"><div class="line one"></div></div>
-              </div>
-              <div class="match">
-                <div class="match-top team"><span class="seed">4</span><span class="name">Team 4</span></div>
-                <div class="match-bottom team"><span class="seed">5</span><span class="name">Team 5</span></div>
-                <div class="match-lines"><div class="line one"></div><div class="line two"></div></div>
-                <div class="match-lines alt"><div class="line one"></div></div>
-              </div>
-              <div class="match">
-                <div class="match-top team"><span class="seed">2</span><span class="name">Team 2</span></div>
-                <div class="match-bottom team"><span class="seed">7</span><span class="name">Team 7</span></div>
-                <div class="match-lines"><div class="line one"></div><div class="line two"></div></div>
-                <div class="match-lines alt"><div class="line one"></div></div>
-              </div>
-              <div class="match">
-                <div class="match-top team"><span class="seed">3</span><span class="name">Team 3</span></div>
-                <div class="match-bottom team"><span class="seed">6</span><span class="name">Team 6</span></div>
-                <div class="match-lines"><div class="line one"></div><div class="line two"></div></div>
-                <div class="match-lines alt"><div class="line one"></div></div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="match">
-                <div class="match-top team"><span class="seed"></span><span class="name">Winner QF1</span></div>
-                <div class="match-bottom team"><span class="seed"></span><span class="name">Winner QF2</span></div>
-                <div class="match-lines"><div class="line one"></div><div class="line two"></div></div>
-                <div class="match-lines alt"><div class="line one"></div></div>
-              </div>
-              <div class="match">
-                <div class="match-top team"><span class="seed"></span><span class="name">Winner QF3</span></div>
-                <div class="match-bottom team"><span class="seed"></span><span class="name">Winner QF4</span></div>
-                <div class="match-lines"><div class="line one"></div><div class="line two"></div></div>
-                <div class="match-lines alt"><div class="line one"></div></div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="match">
-                <div class="match-top team"><span class="seed"></span><span class="name">Winner SF1</span></div>
-                <div class="match-bottom team"><span class="seed"></span><span class="name">Winner SF2</span></div>
-                <div class="match-lines"><div class="line one"></div><div class="line two"></div></div>
-                <div class="match-lines alt"><div class="line one"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="sponsors">
-      <div class="container reveal">
-        <div class="section-title">
-          <h2>Our Generous Partners</h2>
-          <p>This community event is made possible by the incredible support of our sponsors. Please support the businesses that support our community.</p>
-        </div>
-        <div class="sponsors__container">
-          <div class="sponsor-card">
-            <a href="https://thefitinstitutechicago.com/" target="_blank"><img src="tfi.png" alt="TFI Physical Therapy & Sports Performance Logo"/></a>
-            <p><strong>TFI Physical Therapy</strong><br>Free On-site Player Assistance & Recovery Support</p>
-          </div>
-          <div class="sponsor-card">
-            <a href="https://thepicklr.com/location/mundelein/" target="_blank"><img src="pick.png" alt="The Picklr Mundelein Logo"/></a>
-            <p><strong>The Picklr – Mundelein</strong><br>Venue</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section cta" id="register">
-      <div class="container reveal">
-        <h2>Ready to Play?</h2>
-        <p>Spots are limited. Register today to secure your place in the tournament and help support a child in need!</p>
-        <a href="https://docs.google.com/forms/d/1OB6x0o3dcXI0t7EbszynxgtBVQE3DqwpktN7LeScRxk/edit" class="btn btn-primary" target="_blank">Secure Your Spot Now</a>
-      </div>
-    </section>
+    <div data-include="sections/hero.html"></div>
+    <div data-include="sections/about.html"></div>
+    <div data-include="sections/impact.html"></div>
+    <div data-include="sections/details.html"></div>
+    <div data-include="sections/bracket.html"></div>
+    <div data-include="sections/sponsors.html"></div>
+    <div data-include="sections/contact.html"></div>
+    <div data-include="sections/cta.html"></div>
   </main>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__container">
-        <ul class="footer__links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#details">Details</a></li>
-          <li><a href="#sponsors">Sponsors</a></li>
-        </ul>
-        <p class="footer__copy">&copy; 2025 Fill a Heart 4 Kids. All Rights Reserved.</p>
-        <p class="footer__credit">Website by Caleb Lai</p>
-        <p class="footer__credit">Banner photo by <a href="https://unsplash.com/@brendansapp" target="_blank">Brendan Sapp</a> on Unsplash.</p>
-      </div>
-    </div>
-  </footer>
+
+  <!-- FOOTER -->
+  <footer data-include="sections/footer.html"></footer>
+
   <script src="script.js"></script>
 </body>
 </html>
