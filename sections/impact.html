@@ -1,61 +1,55 @@
+<!-- Four-Column Masonry-Style Grid for Impact Cards -->
 <section class="section" id="impact">
   <div class="container reveal">
     <div class="section-title">
-      <h2>Our Impact</h2>
-      <p>Why We Play</p>
+      <h2>Your Impact</h2>
+      <p>Your participation helps</p>
     </div>
-    <div class="impact__grid">
+
+    <!-- Masonry container using CSS columns -->
+    <div class="impact-grid">
       <div class="impact-card stat-card">
+        <i class="ri-user-line impact-card__icon"></i>
         <h3>25,000</h3>
         <p>Unaccompanied homeless youth in Illinois</p>
       </div>
       <div class="impact-card stat-card">
+        <i class="ri-team-line impact-card__icon"></i>
         <h3>3,400</h3>
         <p>Foster youth awaiting adoption</p>
       </div>
       <div class="impact-card">
+        <i class="ri-restaurant-line impact-card__icon"></i>
         <h3>Meal Security</h3>
-        <p>
-          230,000+ lbs of food and gift cards distributed annually to help youth
-          through holidays, breaks, and weekends.
-        </p>
+        <p>230,000+ lbs of food and gift cards distributed annually to help youth through holidays, breaks, and weekends.</p>
       </div>
       <div class="impact-card">
+        <i class="ri-book-line impact-card__icon"></i>
         <h3>Educational Support</h3>
-        <p>
-          50,000+ school supplies provided each year plus tutoring and volunteer
-          opportunities for group home residents.
-        </p>
+        <p>50,000+ school supplies provided each year plus tutoring and volunteer opportunities for group home residents.</p>
       </div>
       <div class="impact-card">
+        <i class="ri-snowy-line impact-card__icon"></i>
         <h3>Winter Comfort</h3>
-        <p>
-          2,000+ coats, blankets, and seasonal clothing items delivered annually to
-          keep kids warm.
-        </p>
+        <p>2,000+ coats, blankets, and seasonal clothing items delivered annually to keep kids warm.</p>
       </div>
       <div class="impact-card">
+        <i class="ri-code-box-line impact-card__icon"></i>
         <h3>Life Skills</h3>
-        <p>
-          STEM workshops, coding classes, business incubator sessions, cooking demos,
-          and more at our Lake Forest facility.
-        </p>
+        <p>STEM workshops, coding classes, business incubator sessions, cooking demos, and more at our Lake Forest facility.</p>
       </div>
       <div class="impact-card">
+        <i class="ri-gift-line impact-card__icon"></i>
         <h3>Celebrations</h3>
-        <p>
-          Birthday and graduation events hosted in-store and in group homes to help
-          children heal and feel valued.
-        </p>
+        <p>Birthday and graduation events hosted in-store and in group homes to help children heal and feel valued.</p>
       </div>
       <div class="impact-card">
+        <i class="ri-heart-line impact-card__icon"></i>
         <h3>Dignity Restoration</h3>
-        <p>
-          Toiletries 4 Dignity packages and WeCare gift bags distributed to restore
-          confidence and attendance.
-        </p>
+        <p>Toiletries 4 Dignity packages and WeCare gift bags distributed to restore confidence and attendance.</p>
       </div>
     </div>
+
     <p class="impact__link">
       <a href="https://www.fillaheart4kids.org" target="_blank">
         Learn more about Fill a Heart 4 Kids
@@ -63,3 +57,65 @@
     </p>
   </div>
 </section>
+
+<!-- Styles for Masonry layout using CSS columns and design system variables -->
+<style>
+  .impact-grid {
+    column-count: 1;
+    column-gap: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .impact-grid {
+      column-count: 2;
+    }
+  }
+  @media (min-width: 1024px) {
+    .impact-grid {
+      column-count: 4;
+    }
+  }
+  .impact-card {
+    display: inline-block;
+    width: 100%; /* fill column width */
+    margin: 0 0 1.5rem;
+    background: var(--white);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    break-inside: avoid;
+  }
+  .impact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+  }
+  .impact-card__icon {
+    font-size: 2.5rem;
+    color: var(--primary-accent);
+    margin-bottom: 0.75rem;
+  }
+  .stat-card h3 {
+    color: var(--primary-dark-blue);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .impact-card h3 {
+    color: var(--primary-dark-blue);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .impact__link {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .impact__link a {
+    color: var(--primary-accent);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .impact__link a:hover {
+    color: var(--primary-accent-dark);
+  }
+</style>
