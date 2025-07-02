@@ -352,6 +352,42 @@ a {
 .sponsor-card:hover img {
   transform: scale(1.05);
 }
+.donate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.donate-card {
+  background: var(--white);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.donate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.donate-card__icon {
+  font-size: 2rem;
+  color: var(--primary-accent);
+  margin-bottom: 0.75rem;
+}
+.donate-card h3 {
+  font-size: 1.25rem;
+  color: var(--primary-dark-blue);
+  margin-bottom: 0.5rem;
+}
+.donate-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--text-dark);
+}
+.donate .btn-primary {
+  margin-top: 1.5rem;
+}
 .cta {
   background: var(--primary-dark-blue);
   color: var(--white);
@@ -398,41 +434,43 @@ a {
   color: #adb5bd;
   text-decoration: underline;
 }
-
-/* Mobile Navigation */
-.nav__toggle {
-  display: block;
-  position: relative;
-  z-index: 2000;
-}
-.nav__menu {
-  position: fixed;
-  top: 80px;
-  right: -100%;
-  width: 100%;
-  height: calc(100% - 80px);
-  background: var(--white);
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 2rem;
-  gap: 2rem;
-  transition: right 0.3s ease;
-}
-.nav__menu.show-menu {
-  right: 0;
-}
-
-/* Stack F4K image above text on mobile */
 @media (max-width: 768px) {
+  .nav__toggle {
+    display: block;
+    position: relative;
+    z-index: 2000;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: calc(100% - 80px);
+    background: var(--white);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    gap: 2rem;
+    transition: right 0.3s ease;
+  }
+  .nav__menu.show-menu {
+    right: 0;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
   .about__container {
     display: flex;
     flex-direction: column-reverse;
     gap: 2rem;
   }
+  .donate-grid {
+    grid-template-columns: 1fr;
+  }
 }
-
-/* Reset nav on larger screens */
 @media (min-width: 769px) {
   .nav__toggle {
     display: none;
@@ -443,58 +481,4 @@ a {
     height: auto;
     background: none;
   }
-}
-
-/* ───── Updated Donate Section CSS ───── */
-
-/* 1×3 grid on desktop, stacking to 1-column on small screens */
-.donate-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin: 2rem 0; /* add some vertical breathing room */
-}
-
-@media (max-width: 768px) {
-  .donate-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Card styling (reuses your existing variables) */
-.donate-card {
-  background: var(--white);
-  border-radius: 0.75rem;
-  box-shadow: var(--shadow);
-  padding: 1.25rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.donate-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.donate-card__icon {
-  font-size: 2rem;
-  color: var(--primary-accent);
-  margin-bottom: 0.75rem;
-}
-
-.donate-card h3 {
-  font-size: 1.25rem;
-  color: var(--primary-dark-blue);
-  margin-bottom: 0.5rem;
-}
-
-.donate-card p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: var(--text-dark);
-}
-
-/* Ensure the “Donate Now” button matches your other primary buttons */
-.donate .btn-primary {
-  margin-top: 1.5rem;
 }
