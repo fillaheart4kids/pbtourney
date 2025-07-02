@@ -444,3 +444,57 @@ a {
     background: none;
   }
 }
+
+/* ───── Updated Donate Section CSS ───── */
+
+/* 1×3 grid on desktop, stacking to 1-column on small screens */
+.donate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0; /* add some vertical breathing room */
+}
+
+@media (max-width: 768px) {
+  .donate-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card styling (reuses your existing variables) */
+.donate-card {
+  background: var(--white);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.donate-card__icon {
+  font-size: 2rem;
+  color: var(--primary-accent);
+  margin-bottom: 0.75rem;
+}
+
+.donate-card h3 {
+  font-size: 1.25rem;
+  color: var(--primary-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.donate-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--text-dark);
+}
+
+/* Ensure the “Donate Now” button matches your other primary buttons */
+.donate .btn-primary {
+  margin-top: 1.5rem;
+}
