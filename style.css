@@ -482,3 +482,30 @@ a {
     background: none;
   }
 }
+
+.about__image-wrapper.f4k-bg {
+  width: clamp(300px, 40vw, 600px);
+  aspect-ratio: 4 / 3;
+  background: url('f4k.png') no-repeat center/contain;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin: 0 auto;
+}
+.sponsor-logo {
+  display: block;
+  width: clamp(150px, 20vw, 300px);
+  aspect-ratio: 4 / 3;         /* or whatever matches your logo dimensions */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 0 auto 1rem;         /* center it and give some spacing below */
+}
+
+/* individual backgrounds */
+.tfi-bg {
+  background-image: url('tfi.png');
+}
+
+.pick-bg {
+  background-image: url('pick.png');
+}
