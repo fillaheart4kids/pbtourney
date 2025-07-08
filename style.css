@@ -509,3 +509,54 @@ a {
 .pick-bg {
   background-image: url('pick.png');
 }
+
+.footer {
+  background: var(--text-dark);
+  color: var(--text-light);
+  padding: 4rem 0 2rem;
+}
+
+.footer__container {
+  border-bottom: 1px solid #495057;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer__links a {
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.footer__disclaimer {
+  font-size: 0.85rem;
+  color: #adb5bd;
+  max-width: 65ch;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.footer__copy,
+.footer__credit {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin: 0.5rem 0;
+  color: #adb5bd;
+  font-size: 0.9rem;
+}
+
+.footer__credit a {
+  color: #adb5bd;
+  text-decoration: underline;
+}
