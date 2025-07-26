@@ -561,3 +561,23 @@ a {
   color: #adb5bd;
   text-decoration: underline;
 }
+
+.bracket-card {
+  text-align: center;
+}
+
+.bracket-image {
+  display: block;
+  width: clamp(300px, 90vw, 1000px);
+  aspect-ratio: 8 / 6; /* Adjust depending on image shape */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 0 auto;
+  box-shadow: var(--shadow);
+  border-radius: 12px;
+}
+
+.bracket-bg {
+  background-image: url('bracket.png');
+}
